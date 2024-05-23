@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilos/relatorio.css">
+    <title>Nova Cotação</title>
+</head>
+<body>
+    <header>
+        <img src="imagens/logo.png" alt="logo">
+        <div id="usuario">
+            <a href="#"><img src="imagens/usuario.png" alt="icone-usuario"></a>
+            <p id="usuario-logado">Matheus Marques</p>
+        </div>
+    </header>
+    <main>
+        <section id="section-menu">
+            <nav>
+                <ul>
+                    <li><a href="tela.principal.html">Home</a></li>
+                    <li><a href="tela.CriarCotacao.html">Abrir Cotação</a></li>
+                    <li><a href="#">Relatório de Cotações</a></li>
+                </ul>
+            </nav>
+            <a href="index.html"><img src="imagens/sair.png" alt="icone-sair"></a>
+        </section>
+
+        <div id="tabela">
+            <div id="filtro">
+                <fieldset>
+                    <legend>Filtro</legend>
+                    <form id="filterForm">
+                        <label for="codigo">Num. Cotação: <input type="number" name="codigoFornecedor" id="codigo"></label>
+                        <label for="data">Data: <input type="date" name="data" id="data"></label>
+                        <label for="Status">Status: </label>
+                        <input type="text" name="Status" id="status" list="ListaData">
+                        <datalist id="ListaData">
+                            <option>Aprovado</option>
+                            <option>Pendente</option>
+                            <option>Reprovado</option>
+                        </datalist>
+                        <button type="reset" id="limpar">Limpar</button>
+                        <button type="button" id="filterButton">Filtrar</button>
+                    </form>
+                    
+                </fieldset>
+            </div>
+
+            <div id="dados">
+                <table>
+                    <caption>Cotações</caption>
+                    <thead>
+                        <tr>
+                            <th>Id Cotação</th>
+                            <th>Descrição</th>
+                            <th>Setor</th>
+                            <th>Data</th>
+                            <th>Status</th>
+                            <th>Funcionário</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0001</td>
+                            <td>Computadores</td>
+                            <td>Ti</td>
+                            <td>22/05/2024</td>
+                            <td>Pendente</td>
+                            <td>Pedro Henrique</td>
+                        </tr>
+                        <tr>
+                            <td>0002</td>
+                            <td>Material escolar</td>
+                            <td>Administrativo</td>
+                            <td>22/05/2024</td>
+                            <td>Aprovado</td>
+                            <td>Pedro Henrique</td>
+                        </tr>
+                        <tr>
+                            <td>0003</td>
+                            <td>Material Hospitalar</td>
+                            <td>Enfermaria</td>
+                            <td>22/05/2024</td>
+                            <td>Reprovado</td>
+                            <td>Sara Silva</td>
+                        </tr>
+                        <tr>
+                            <td>0004</td>
+                            <td>Impressoras</td>
+                            <td>Ti</td>
+                            <td>23/05/2024</td>
+                            <td>Aprovado</td>
+                            <td>Sara Silva</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="cotacaoModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Detalhes da Cotação</h2>
+                <div id="detalhesCotacao">
+                    
+                </div>
+                <button id="printButton"><img src="imagens/impressora.png" alt="icone-impressora"></button>
+            </div>
+        </div>
+        
+        
+        
+    </main>
+
+    <script src="scripts/relatorio.js"></script>
+</body>
+</html>

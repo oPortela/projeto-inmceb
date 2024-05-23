@@ -1,0 +1,277 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+
+:root {
+    --color0: #006885;
+    --color1: #A1B6FA;
+    --color2: #01aa1a;
+    --color3: #F2F2F2;
+    --color4: #c50000;
+    --color5: #d1d1d1;
+    --color6: #81cce0;
+    --color7: #2BAACE;
+
+    --font0: 'Sora', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: var(--color0);
+    height: 50px;
+    border-bottom: 1px solid white;
+    padding: 0 10px; 
+}
+
+header > img {
+    height: 40px;
+    width: 100; 
+    margin-right: 10px; 
+}
+
+header > div#usuario {
+    display: flex;
+    align-items: center; 
+    color: white;
+    margin-left: auto; 
+}
+
+header > div#usuario > p {
+    margin-left: 5px; 
+}
+
+main {
+    display: flex;
+    height: 100vh;
+}
+
+main > section#section-menu {
+    background-color: var(--color0);
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+main > section#section-menu > nav {
+    padding-top: 50px;
+}
+
+main > section#section-menu > nav > ul > li {
+    padding-left: 10px;
+    padding-top: 12px;
+}
+
+main > section#section-menu > nav > ul > li > a {
+    text-decoration: none;
+    color: white;
+}
+
+main > section#section-menu > nav > ul > li > a:hover {
+    color: black;
+    background-color: white;
+    height: 20px;
+    width: 40px;
+    border-radius: 2.5px;
+}
+
+main > section#section-menu > a {
+    margin-top: auto;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+form#formulario-cotacao {
+    background-image: linear-gradient(to bottom, white, rgba(136, 136, 136, 0.555) 90%);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: calc(100vw - 200px);
+    margin: 0;
+}
+
+div.fornecedor > fieldset {
+    border-radius: 10px;
+}
+
+div.info-fornecedor{
+    display: block;
+}
+
+div.info-fornecedor > label > input{
+    width: 100px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+div.fornecedor {
+    padding-bottom: 10px;
+}
+
+/*div#arquivo-cotacao {
+    margin-top: 10px;
+    border: 1px solid black;
+    height: 150px;
+    width: 500px;
+}
+
+div#arquivo-cotacao > label > input {
+    height: 100px;
+    width: 400px;
+}*/
+
+#arquivo-cotacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 700px; 
+    height: 150px; 
+    border: 2px dashed #000000; 
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    padding: 10px;
+}
+
+#arquivo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#arquivo img {
+    max-width: 100px; 
+    max-height: 100px; 
+}
+
+#file-input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#file-name {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #000000;
+}
+
+button.pesquisar-fornecedor {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    background-color: var(--color0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    width: 150px;
+}
+
+button.adicionar-produto {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    background-color: var(--color2);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    width: 150px;
+}
+
+button#adicionar-fornecedor {
+    margin-top: auto;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    background-color: var(--color0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    width: 150px;
+}
+
+button#enviar-cotacao {
+    margin-top: auto;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    background-color: var(--color2);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    width: 150px;
+}
+
+button#cancelar-cotacao, button.remover-fornecedor {
+    margin-top: auto;
+    margin-bottom: 15px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+    color: red;
+    border: 1px solid rgba(0, 0, 0, 0.473);
+    border-radius: 5px;
+    height: 30px;
+    width: 150px;
+}
+
+button#cancelar-cotacao:hover {
+    background-color: red;
+    color: white;
+}
+
+button.remover-fornecedor {
+    margin-top: auto;
+    margin-bottom: 15px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    width: 150px;
+}
+
+.produtos .produto {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto auto auto;
+    grid-column-gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.produtos .produto input[type="text"],
+.produtos .produto input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.produtos .produto button {
+    padding: 8px 12px;
+    background-color: #c50000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

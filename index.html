@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="estilos/styleLogin.css">
+</head>
+<body>
+    <main>
+        <section id="login-container">
+                <a href="tela.principal.html" id="logo"><img src="imagens/logo.png" alt="logo-png"></a>
+                <h2>Sistema de Gestão de Compras</h2>
+                <form action="tela.principal.html" method="post" autocomplete="on" id="login-form">
+                    <label for="usuario"></label>
+                    <input type="text" name="usuario" id="usuario" placeholder="Usuário" required>
+                    <br>
+                    <label for="input-password"></label>
+                    <input type="password" name="input-password" id="password" placeholder="Senha" minlength="5" >
+                    <br>
+
+                    <button type="submit">Entrar</button>
+                </form>
+        </section>
+    </main>
+    
+    <script src="scripts/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon-32x32.png" type="logo/x-icon">
+    <link rel="stylesheet" href="estilos/style.Princ.css">
+    <title>INCEMB</title>
+</head>
+<body>
+    <header>
+        <img src="imagens/logo.png" alt="logo">
+        <div id="usuario">
+            <a href="#"><img src="imagens/usuario.png" alt="icone-usuario"></a>
+            <p id="usuario-logado">Matheus Marques</p>
+        </div>
+    </header>
+    <main>
+        <section id="section-menu">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="tela.CriarCotacao.html">Abrir Cotação</a></li>
+                    <li><a href="relatorio.html">Relatório de Cotações</a></li>
+                </ul>
+            </nav>
+            <a href="index.html"><img src="imagens/sair.png" alt="icone-sair"></a>
+        </section>
+
+        <section id="section-principal">
+
+            <div id="pesquisa-data">
+                <input type="text" name="data" id="idata" list="ListaData">
+                <datalist id="ListaData">
+                    <option>Hoje</option>
+                    <option>Ontem</option>
+                    <option>Últimos 7 dias</option>
+                    <option>Últimos 30 dias</option>
+                </datalist>
+            </div>
+            
+            <div class="informacoes" id="informacoes-aberto">
+                <p>Qtd. Cotações em aberto</p>
+                <p>10</p>
+                <div id="cotacao-aceita" class="cotacao-icones">
+                    <img src="imagens/cotação-aceita.png" alt="icone-em-aberto">
+                </div>
+            </div>
+            <div class="informacoes" id="informacoes-finalizada">
+                <p>Qtd. Cotações Finalizadas</p>
+                <p>30</p>
+                <div id="cotacao-finalizada" class="cotacao-icones">
+                    <img src="imagens/cotacao-finalizada.png" alt="icone-finalizado">
+                </div>
+            </div>
+            <div class="informacoes" id="informacoes-extra">
+                <p>Qtd. Cotações Rejeitada</p>
+                <p>02</p>
+                <div id="cotacao-rejeitada" class="cotacao-icones">
+                    <img src="imagens/cotacao-rejeitar.png" alt="icone-rejeição">
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+
+:root {
+    --color0: #006885;
+    --color1: #A1B6FA;
+    --color2: #80f29159;
+    --color3: #F2F2F2;
+    --color4: #c50000;
+    --color5: #d1d1d1;
+    --color6: #81cce0;
+    --color7: #2BAACE;
+
+    --font0: 'Sora', sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: var(--color0);
+    height: 50px;
+    border-bottom: 1px solid white;
+    padding: 0 10px; 
+}
+
+header > img {
+    height: 40px;
+    width: 100; 
+    margin-right: 10px; 
+}
+
+header > div#usuario {
+    display: flex;
+    align-items: center; 
+    color: white;
+    margin-left: auto; 
+}
+
+header > div#usuario > p {
+    margin-left: 5px; 
+}
+
+main {
+    display: flex;
+    height: calc(100vh - 50px);
+}
+
+main > section#section-menu {
+    background-color: var(--color0);
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; 
+}
+
+main > section#section-menu > nav {
+    padding-top: 50px;
+}
+
+main > section#section-menu > nav > ul > li {
+    padding-left: 10px;
+    padding-top: 12px;
+}
+
+main > section#section-menu > nav > ul > li > a {
+    text-decoration: none;
+    color: white;
+}
+
+main > section#section-menu > nav > ul > li > a:hover {
+    color: black;
+}
+
+main > section#section-menu > a {
+    margin-top: auto;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+section#section-principal {
+    display: flex;
+    background-image: linear-gradient(to top, var(--color5) 80%, var(--color3));
+    flex-grow: 1; 
+    padding: 20px; 
+    overflow-y: auto;
+}
+
+section#section-principal > div.informacoes {
+    background-color: white;
+    height: 120px;
+    width: 230px; 
+    margin-right: 80px; 
+    padding: 20px; 
+    flex-shrink: 0; 
+    border-radius: 10px;
+}
+
+section#section-principal > div#informacoes-aberto {
+    /* flex-grow: 1; */
+}
+
+section#section-principal > div#informacoes-finalizada {
+    /* flex-grow: 1; */
+}
+
+div.cotacao-icones {
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+}
+
+div.cotacao-icones > img {
+    height: 35px;
+    width: 35px;
+}
+
+div#cotacao-aceita {
+    background-color: rgb(214, 214, 18);
+}
+
+div#cotacao-finalizada {
+    background-color: green;
+}
+
+div#cotacao-rejeitada {
+    background-color: red;
+}

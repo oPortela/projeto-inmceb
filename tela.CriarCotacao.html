@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilos/criarCotacao.css">
+    <title>Nova Cotação</title>
+</head>
+<body>
+    <header>
+        <img src="imagens/logo.png" alt="logo">
+        <div id="usuario">
+            <a href="#"><img src="imagens/usuario.png" alt="icone-usuario"></a>
+            <p id="usuario-logado">Matheus Marques</p>
+        </div>
+    </header>
+    <main>
+        <section id="section-menu">
+            <nav>
+                <ul>
+                    <li><a href="tela.principal.html">Home</a></li>
+                    <li><a href="tela.CriarCotacao.html">Abrir Cotação</a></li>
+                    <li><a href="relatorio.html">Relatório de Cotações</a></li>
+                </ul>
+            </nav>
+            <a href="index.html"><img src="imagens/sair.png" alt="icone-sair"></a>
+        </section>
+
+        <form id="formulario-cotacao">
+            <div id="fornecedores">
+
+                <div class="fornecedor">
+                    <fieldset>
+                        <legend>Fornecedor 1</legend>
+                        <div class="info-fornecedor">
+                            <label>Código: <input type="text" name="codigoFornecedor1" required></label>
+                            <label>Nome: <input type="text" name="nomeFornecedor1" readonly></label>
+                            <label>CNPJ: <input type="text" name="cnpjFornecedor1" readonly></label>
+                            <label>Endereço: <input type="text" name="enderecoFornecedor1" readonly></label>
+                            <label>E-mail: <input type="email" name="emailFornecedor1" readonly></label>
+                            <label>Telefone: <input type="tel" name="telefoneFornecedor1" readonly></label>
+                        </div>
+                    </fieldset>
+                    <button type="button" class="pesquisar-fornecedor">Pesquisar Fornecedor</button>
+                    <button type="button" class="adicionar-produto">Adicionar Produto</button>
+                    
+                    <div class="produtos">
+                        <!-- Div para os produtos adicionados -->
+                    </div>
+                    <div id="arquivo-cotacao">
+                        <label id="arquivo" for="file-input">
+                            <img src="imagens/documento.png" alt="icone-documento">
+                            <input id="file-input" type="file" name="image" onchange="displayFileName()">
+                        </label>
+                        <span id="file-name"></span>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+    
+            <button type="button" id="adicionar-fornecedor">Adicionar Fornecedor</button>
+            <button type="submit" id="enviar-cotacao">Enviar Cotação</button>
+            <button type="reset" id="cancelar-cotacao">Cancelar</button>
+        </form>
+    </main>
+
+    <script src="scripts/CriarCotacao.js"></script>
+</body>
+</html>
